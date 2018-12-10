@@ -7,5 +7,4 @@ module.exports = function (app) {
     leaders.find();
     leaders.create();
     leaders.delete('id');
-    leaders.update('_id');
 };

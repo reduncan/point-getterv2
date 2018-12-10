@@ -9,7 +9,7 @@ class RestfulAPI {
 
     find() {
         this.app.get(`/api/${this.resource}`, (req, res) => {
-            this.model.findAll({})
+            this.model.find({})
                 .then(function (data) {
                     res.json(data);
                 })
@@ -36,18 +36,6 @@ class RestfulAPI {
             this.model.findByIdAndDelete(req.params[identifier])
                 .then(data => res.json({ success: true }))
                 .catch(err => res.json(err))
-        });
-    }
-
-    update(identifier) {
-        this.app.put(`/api/${this.resource}/:${identifier}`, (req, res) => {
-            this.model.findOneAndUpdate({ [identifier]: req.body[identifier] }, { completed: req.body.completed }, { new: true })
-                .then(function (dbTodo) {
-                    res.json(dbTodo);
-                })
-                .catch(function (err) {
-                    res.json(err);
-                });
         });
     }
 }
