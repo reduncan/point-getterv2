@@ -2,6 +2,8 @@ const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
 
+require('dotenv').config();
+
 const app = express();
 const PORT = process.env.PORT || 8080;
 
@@ -16,7 +18,7 @@ require('./routes/html-routes.js')(app);
 mongoose.promise = global.Promise;
 
 mongoose.connect(
-    process.env.MONGODB_URI || "mongodb://rduncan:pass123@ds231588.mlab.com:31588/heroku_ndk9w99q",
+    process.env.MONGODB_URI || `mongodb://${process.env.userName}:${process.env.passWord}@ds051334.mlab.com:51334/heroku_8c5g9z7b`,
     { useNewUrlParser: true }
 );
 
