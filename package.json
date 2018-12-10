@@ -1,0 +1,25 @@
+{
+  "name": "point-getterv2",
+  "version": "1.0.0",
+  "description": "House Point Game with DB",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reduncan/point-getterv2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/reduncan/point-getterv2/issues"
+  },
+  "homepage": "https://github.com/reduncan/point-getterv2#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "mongoose": "^5.3.15",
+    "path": "^0.12.7"
+  }
+}
