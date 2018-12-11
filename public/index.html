@@ -17,29 +17,44 @@
 
 <body>
     <main>
-        <section class="welcome"></section>
-        <section class="points">
-            <h1>House Point Goal:</h1>
-            <h1 id="goal"></h1>
-            <h1 id="result"></h1>
-            <h1>House Point Total:</h1>
-            <h1 id="total"></h1>
+        <section class="welcome hide">
+            <h1 class="title">House Point Collector</h1>
+            <div class="leaders"></div>
+            <div class="instructions">
+                <p>Object: Match the house point goal exactly to win. The tricky part, is doing it in the least amount of clicks as possible. </p>
+                <p>How to Play: Each round the House Point Goal will be randomly chosen. Along with the House Point Goal being randomly chosen, the amount of points per sigil is also randomly chosen. The tricky part? You will not know how many points each sigil is worth. Click a sigil to learn it's point value. Once you know the point values, it is time to match the House Point Goal exactly to win. If you go over the House Point Goal you lose.</p>
+            </div>
+            <button class="start" type="submit">PLAY</button>
         </section>
-        <section class="sigils">
-            <div id="ghp">
-                <img src="css/assets/gh.png" alt="GitHubblepuff" width="300">
+        <section class="game">
+            <div class="points">
+                <h1>House Point Goal:</h1>
+                <h1 id="goal"></h1>
+                <h1 id="result"></h1>
+                <h1>House Point Total:</h1>
+                <h1 id="total"></h1>
             </div>
-            <div id="rc">
-                <img src="css/assets/rc.png" alt="RavenClosure" width="300">
-            </div>
-            <div id="siyc">
-                <img src="css/assets/siyc.png" alt="SlytherinIndent" width="300">
-            </div>
-            <div id="gd">
-                <img src="css/assets/gd.png" alt="GryffinDOM" width="300">
+            <section class="sigils">
+                <div id="ghp">
+                    <img src="css/assets/gh.png" alt="GitHubblepuff" width="300">
+                </div>
+                <div id="rc">
+                    <img src="css/assets/rc.png" alt="RavenClosure" width="300">
+                </div>
+                <div id="siyc">
+                    <img src="css/assets/siyc.png" alt="SlytherinIndent" width="300">
+                </div>
+                <div id="gd">
+                    <img src="css/assets/gd.png" alt="GryffinDOM" width="300">
+                </section>
             </div>
         </section>
-        <section class="leader"></section>
+        <section class="input-leader hide">
+            <form>
+                    <input type="text" placeholder="Enter Your Name" id="name"/>
+                    <button class="submit" type="submit">SUBMIT</button>
+                </form>
+        </section>
     </main>
     <script src="app.js"></script>
 </body>

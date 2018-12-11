@@ -1,4 +1,5 @@
 let total = 0;
+let clicks = 0;
 
 const render = function (location, htmlStr) {
     $(location).empty();
